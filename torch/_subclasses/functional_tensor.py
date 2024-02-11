@@ -209,6 +209,9 @@ class FunctionalTensor(torch.Tensor):
     def mark_mutation_hidden_from_autograd(self) -> None:
         torch._functionalize_mark_mutation_hidden_from_autograd(self.elem)
 
+    def tolist(self) -> None:
+        return self.tolist()
+
 
 class FunctionalTensorMode(TorchDispatchMode):
     def __init__(self, pre_dispatch=False, export=False):
