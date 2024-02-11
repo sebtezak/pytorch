@@ -210,7 +210,7 @@ class FunctionalTensor(torch.Tensor):
         torch._functionalize_mark_mutation_hidden_from_autograd(self.elem)
 
     def tolist(self) -> None:
-        return self.tolist()
+        return self.elem.tolist()
 
 
 class FunctionalTensorMode(TorchDispatchMode):
